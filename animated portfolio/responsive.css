@@ -1,0 +1,153 @@
+/* responsive design */
+
+
+@media (max-width:1024px) {
+
+  nav {
+    padding: 10px 20px;
+  }
+
+  .header {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-btn {
+    gap: 10px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+
+  .warpper {
+    padding: 0 15px;
+  }
+
+  .header .logo img {
+    width: 100px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .btn-primary {
+    font-size: 1.1rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:520px) {
+
+  .header-btn .btn-primary {
+    display: none;
+  }
+
+  .portfolio-content .portfolio-description {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: lowercase;
+  }
+
+  .hero-description {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    white-space: nowrap;
+  }
+
+  .btn-secondary {
+    font-size: 1.2rem;
+  }
+
+  .about-image {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .services-description {
+    width: 100%;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .services-conatiner {
+    padding: 20px;
+  }
+
+}
+
+@media (max-width:350px) {
+  .header-btn .btn-primary {
+    display: none;
+  }
+
+  .header-btn {
+    gap: 5px;
+  }
+
+
+  .dark-mode-toggle #dark-mode-icon {
+    font-size: 2rem;
+    margin-right: 5px;
+  }
+
+  .contact-form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .tool img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger {
+    font-size: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    gap: 5px;
+  }
+}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <!-- font Awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- css file -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <!-- aos cdn -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <!-- header -->
+
+  <header class="header wrapper">
+    <div class="logo">
+      <img
+        src="data:image/png;base64,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"
+        alt="" data-aos="fade-up" data-aos-delay="100">
+    </div>
+    <nav data-aos="fade-up" data-aos-delay="300">
+      <ul class="nav_items">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">My Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-btn" data-aos="fade-up" data-aos-delay="400">
+      <div class="dark-mode-toggle">
+        <i class="fa-regular fa-moon " id="dark-mode-icon"></i>
+        <button class="btn btn-primary">Contact <i class="fas fa-arrow-up-right-from-square"></i> </button>
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="wrapper">
+    <section class="hero">
+      <img data-aos="fade-up" data-aos-delay="500" src="https://eliana.greatstack.in/assets/profile-img-B51wlMEV.png"
+        alt="aniket" class="hero-image">
+      <h1 class="hero-name" data-aos="zoom-in" data-aos-delay="800">Hi! I'm Aniket kumar</h1>
+      <h2 class="hero-title" data-aos="zoom-in" data-aos-delay="900">Frontend Web Developer</h2>
+      <h2 class="hero-title" data-aos="zoom-in" data-aos-delay="1000"> Based in London</h2>
+      <p class="hero-description" data-aos="zoom-in" data-aos-delay="1100">
+        I am a frontend developer from California, USA with 10 years of experience in multiple companies like Microsoft,
+        Tesla, and Apple.
+      </p>
+      <div class="hero-btn">
+        <button class="btn btn-secondary">Contact<i class="fas fa-arrow-right"></i></button>
+        <button class="btn btn-primary">My resume <i class="fas fa-download"></i></button>
+      </div>
+    </section>
+  </section>
+
+  <!-- about me section -->
+
+  <section class="about">
+    <div class="about-container wrapper">
+      <!-- Left Side: Image -->
+      <div class="about-image" data-aos="fade-right" data-aos-delay="300">
+        <img src="https://eliana.greatstack.in/assets/user-image-Dc_rZ4ty.png" alt="About Me">
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="about-content" data-aos="fade-left" data-aos-delay="500">
+        <h2 class="about-subtitle">Introduction</h2>
+        <h3 class="about-title">About Me</h3>
+        <p class="about-description">
+          I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout
+          my career, I have had the privilege of collaborating with prestigious organizations, contributing to their
+          success and growth.
+        </p>
+
+        <!-- Cards -->
+        <div class="about-cards">
+          <div class="card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Education</h3>
+            <p>HTML, CSS, JavaScript, React Js, Next Js</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Projects</h3>
+            <p>HTML, CSS, JavaScript, React Js, Next Js</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>Skills</h3>
+            <p>HTML, CSS, JavaScript, React Js, Next Js</p>
+          </div>
+        </div>
+
+        <!-- tools -->
+        <!-- Tools Section -->
+        <!-- Tools Section -->
+        <div class="tools-section">
+          <h3 class="tools-title">Tools That Can Be Used</h3>
+          <div class="tools-grid">
+            <div class="tool" data-aos="flip-left" data-aos-delay="900" data-aos="flip-left" data-aos-delay="900">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+            </div>
+            <div class="tool" data-aos="flip-left" data-aos-delay="1000">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+            </div>
+            <div class="tool" data-aos="flip-left" data-aos-delay="1100">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+            </div>
+            <div class="tool" data-aos="flip-left" data-aos-delay="1200">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            </div>
+            <div class="tool" data-aos="flip-left" data-aos-delay="1300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+            </div>
+            <div class="tool" data-aos="flip-left" data-aos-delay="1400">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap">
+            </div>
+            <!-- <div class="tool" data-aos="flip-left" data-aos-delay="900">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                alt="Tailwind CSS">
+            </div> -->
+            <div class="tool" data-aos="flip-left" data-aos-delay="1500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript">
+            </div>
+            <div class="tool" data-aos="flip-left" data-aos-delay="1600">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React JS">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services section -->
+
+  <section class="Services">
+    <div class="services-conatiner wrapper">
+      <div class="services-content" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="services-subtitle">What I Offer</h2>
+        <h3 class="services-title">My Services</h3>
+        <p class="services-description">I am a frontend developer from California, USA with 10 years of experience in
+          multiple companies like Microsoft, Tesla and Apple.</p>
+      </div>
+      <div class="services-cards">
+        <div class="service-card" data-aos="zoom-in-left" data-aos-delay="300">
+          <i class="fas fa-laptop-code service-icon"></i>
+          <h3 class="service-card-title">Web Development</h3>
+
+          <p class="service-card-description">
+            I create responsive and user-friendly websites using the latest web technologies to ensure optimal
+            performance across all devices.
+          </p>
+
+          <a href="#" class="read-btn">Read more</a>
+        </div>
+
+        <div class="service-card" data-aos="zoom-in-left" data-aos-delay="400">
+          <i class="fas fa-paint-brush service-icon"></i>
+          <h3 class="service-card-title">UI/UX Design</h3>
+          <p class="service-card-description">
+            I design intuitive and visually appealing user interfaces that enhance user experience and engagement.
+          </p>
+          <a href="#" class="read-btn">Read more</a>
+
+        </div>
+
+        <div class="service-card" data-aos="zoom-in-left" data-aos-delay="500">
+          <i class="fas fa-mobile-alt service-icon"></i>
+          <h3 class="service-card-title">Mobile App Development</h3>
+          <p class="service-card-description">
+            I develop cross-platform mobile applications that provide seamless functionality and a great user
+            experience on both iOS and Android devices.
+          </p>
+          <a href="#" class="read-btn">Read more</a>
+
+        </div>
+
+        <div class="service-card" data-aos="zoom-in-left" data-aos-delay="600">
+          <i class="fas fa-paint-brush service-icon"></i>
+          <h3 class="service-card-title">UI/UX Design</h3>
+          <p class="service-card-description">
+            I design intuitive and visually appealing user interfaces that enhance user experience and engagement.
+          </p>
+          <a href="#" class="read-btn">Read more</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- portfolio section -->
+
+
+  <section class="portfolio">
+    <div class="portfolio-container wrapper">
+      <div class="portfolio-content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <h2 class="portfolio-subtitle">My portfolio</h2>
+        <h3 class="portfolio-title">My latest work</h3>
+        <p class="portfolio-description">
+          Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end
+          development.
+        </p>
+      </div>
+
+      <div class="portfolio-cards">
+        <!-- Project 1 -->
+        <div class="portfolio-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="5000">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+            alt="Project 1" class="portfolio-image" />
+          <h3 class="portfolio-card-title">Education NGO Website</h3>
+          <p class="portfolio-card-description">
+            A full-stack MERN website for an education-based NGO featuring donations, contact forms, and admin
+            dashboards.
+          </p>
+          <a href="#" class="read-btn">View Project</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="4000">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+            alt="Project 2" class="portfolio-image" />
+          <h3 class="portfolio-card-title">E-Commerce Dashboard</h3>
+          <p class="portfolio-card-description">
+            An admin dashboard with charts, order management, and analytics built with React and Chart.js.
+          </p>
+          <a href="#" class="read-btn">View Project</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="4000">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+            alt="Project 3" class="portfolio-image" />
+          <h3 class="portfolio-card-title">Portfolio Website</h3>
+          <p class="portfolio-card-description">
+            A personal portfolio built using HTML, CSS, and JavaScript to showcase projects and contact details.
+          </p>
+          <a href="#" class="read-btn">View Project</a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="portfolio-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+            alt="Project 4" class="portfolio-image" />
+          <h3 class="portfolio-card-title">Weather App</h3>
+          <p class="portfolio-card-description">
+            A modern weather forecasting app using OpenWeather API and React with clean, responsive UI.
+          </p>
+          <a href="#" class="read-btn">View Project</a>
+        </div>
+      </div>
+
+      <div class="btn btn-primary">Show more <i class="fas fa-arrow-up-right-from-square"></i></div>
+    </div>
+  </section>
+
+
+  <!-- form section -->
+
+
+  <section class="contact-section">
+    <div class="contact-container  wrapper" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+      <div class="contact-header">
+        <p class="contact-subtitle">Connect with me</p>
+        <h2 class="contact-title">Get in touch</h2>
+        <p class="contact-description">
+          I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.
+        </p>
+      </div>
+
+      <form class="contact-form" action="#">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Enter your name" class="form-input">
+          <input type="email" name="email" placeholder="Enter your email" class="form-input">
+        </div>
+
+        <div class="form-row">
+          <textarea name="message" placeholder="Enter your message" class="form-textarea"></textarea>
+        </div>
+
+        <div class="form-row captcha-row">
+          <div class="captcha-box">
+            <input type="checkbox" class="captcha-checkbox"> I am human
+            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="hCaptcha" class="captcha-logo">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="form-btn">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-container wrapper">
+      <div class="footer-top">
+        <img
+          src="data:image/png;base64,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"
+          alt="Logo" class="footer-logo">
+        <div class="footer-email">
+          <i class="fas fa-envelope"></i>
+          <span>greatstackdev@gmail.com</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copright">
+          <p>© 2024 Eliana Jade. All rights reserved.</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
