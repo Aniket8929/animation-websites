@@ -1,0 +1,97 @@
+@media (max-width:1024px) {
+  .navbar-middle .nav-list {
+    gap: 10px;
+  }
+}
+
+@media (max-width:768px) {
+  .navbar-middle {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .btn-download,
+  .btn-shop {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .about-title {
+    font-size: 3rem;
+  }
+
+  .footer-list {
+    gap: 10px;
+  }
+}
+
+@media (max-width:520px) {
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .btn-voucher {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-2-container {
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+
+  .footer-left {
+    text-align: left;
+    width: 100%;
+  }
+
+
+  .footer-list {
+    justify-content: start;
+    list-style: none;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+  }
+}
+
+@media (max-width:375px) {
+  .bag-icon {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none !important;
+  }
+}
